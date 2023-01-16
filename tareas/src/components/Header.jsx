@@ -1,15 +1,12 @@
 import React from 'react'
 import Button from './Button'
 
-const Header = ({tit}) => {
-    const onClick = () => {
-        console.log("estas precionando");
-    }
+const Header = ({tit, onAdd,mostrarForm}) => {
+  
   return (
     <header className='header'>
         <div>{tit}</div>
-        <Button texto="Eliminar" color='red' click={onClick} />
-        <Button texto="Agregar" color='green' click={onClick} />
+        <Button texto={mostrarForm ? 'Ocultar':'Mostar'} color={mostrarForm ? 'red': 'green '} onClick={onAdd}  />
     </header>
   )
 }

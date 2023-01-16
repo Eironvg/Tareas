@@ -1,12 +1,12 @@
 import React from 'react'
 import Tarea from './Tarea'
 
-const Tareas = ({tareas}) => {
+const Tareas = ({tareas,onDelate,onToggle}) => {
     
   return (
     <div>
         {tareas.map((tarea)=>(
-            <Tarea key={tarea.id} tarea={tarea} />
+            <Tarea key={tarea.id} tarea={tarea} onDelate={onDelate} onToggle={onToggle} />
         ))}
     </div>
   )
